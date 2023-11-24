@@ -12,14 +12,14 @@ In this work, we propose a joint feature extraction model TCRE based on task col
 ## Preparation
 
 ### Environment Setup
-The experiments were performed using one single NVIDIA-RTX3090 GPU. The dependency packages can be installed with the command:
+The experiments were performed using one single A800 GPU. The dependency packages can be installed with the command:
 ```
 pip install -r requirements.txt
 ```
 Other configurations we use are:  
-* python == 3.7.10
-* cuda == 11.1
-* cudnn == 8
+* python == 3.8
+* cuda == 11.4
+* cudnn == 8.2
 
 
 ### Data Acquisition and Preprocessing
@@ -28,14 +28,12 @@ This is the first work that covers all the mainstream English datasets for evalu
 Please follow the instructions of reademe.md in each dataset folder in ./data/ for data acquisition and preprocessing.  
 
 ### Model Training
-The training command-line is listed below (command for CONLL04 is in [Evaluation on CoNLL04](#Evaluation-on-CoNLL04)):  
+The training command-line is listed below:  
 ```
 python main.py \
 --data ${ACE2005/ACE2004/SCIERC} \
---do_train \
---do_eval \
 --embed_mode ${albert/scibert} \
---batch_size ${12 (for most datasets) /4 (for SCIERC)} \
+--batch_size ${12 (for ACE2005 and ACE2004) /4 (for SCIERC)} \
 --lr ${1e-5} \
 --output_file ${the name of your output files, e.g. ace_test} \
 --eval_metric ${micro} 
@@ -79,12 +77,12 @@ F1 results on ACE04:
 ## Extension on Ablation Study
 As requested, we release ablation NER/RE results of 5 runs in the category of encoding scheme and decoding strategy.
 
-| Model/seed |  0         |  1       | 2        | 3          |  4         | Mean       | Standard Deviation | 
-| ---------- |  --------- |--------- |--------- |----------- | ---------- | ---------- |--------------------|
-| Original   | 66.8/38.4  |66.9/36.9 |66.4/36.3 |68.0/38.9   | 67.7/37.7  | 67.2/37.6  | 0.67/1.06          |
-| Sequential | 68.7/36.9  |68.0/35.9 |68.5/34.8 |67.7/36.9   | 67.0/36.2  | 68.0/36.1  | 0.68/0.87          |
-| Parallel   | 67.0/35.1  |67.2/36.6 |67.9/37.4 |68.0/37.9   | 66.9/34.6  | 67.4/36.3  | 0.51/1.43          |
-| Selective  | 68.1/37.4  |67.0/35.9 |67.5/38.5 |66.8/35.1   | 67.7/36.7  | 67.4/36.7  | 0.53/1.32          |
+| Model/seed |  ACE2005   |  SCIERC  | 
+| ---------- |  --------- |--------- |
+| Original   | 66.8/38.4  |66.9/36.9 |
+| Sequential | 68.7/36.9  |68.0/35.9 |
+| Parallel   | 67.0/35.1  |67.2/36.6 |
+| Selective  | 68.1/37.4  |67.0/35.9 |
 
 ## Other
 The above is our complete model and main dataset experimental code. In terms of data processing, we have referred to the paper [A Partition Filter Network for Joint Entity and Relation Extraction](https://aclanthology.org/2021.emnlp-main.17.pdf). Regarding the code for other detailed analysis experiments and expansion experiments, we will update it to this warehouse as soon as possible after optimization processing.
