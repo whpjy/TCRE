@@ -77,12 +77,16 @@ F1 results on ACE04:
 ## Extension on Ablation Study
 As requested, we release ablation NER/RE results of 5 runs in the category of encoding scheme and decoding strategy.
 
-| Model/seed |  ACE2005   |  SCIERC  | 
+| Method |  ACE2005   |  SCIERC  | 
 | ---------- |  --------- |--------- |
-| Original   | 66.8/38.4  |66.9/36.9 |
-| Sequential | 68.7/36.9  |68.0/35.9 |
-| Parallel   | 67.0/35.1  |67.2/36.6 |
-| Selective  | 68.1/37.4  |67.0/35.9 |
+| w/o ALL    | 89.3/63.7  |65.5/37.6 |
+| w/o FA-GATE| 88.7/66.6  |66.8/38.8 |
+| w/o FA-FAU | 88.5/65.5  |66.1/38.0 |
+| w/o FI-GATE| 89.5/65.9  |67.2/38.2 |
+| w/o FI-ATT | 89.1/65.4  |67.0/38.5 |
+| w/o FF     | 89.6/67.1  |67.2/38.9 |
+| w/o DWL    | 89.9/67.5  |67.5/39.3 |
+
 
 ## Other
 The above is our complete model and main dataset experimental code. In terms of data processing, we have referred to the paper [A Partition Filter Network for Joint Entity and Relation Extraction](https://aclanthology.org/2021.emnlp-main.17.pdf). Regarding the code for other detailed analysis experiments and expansion experiments, we will update it to this warehouse as soon as possible after optimization processing.
