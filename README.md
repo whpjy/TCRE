@@ -1,6 +1,6 @@
 # TCRE
 
-This repository contains codes of the official implementation for the paper [A Partition Filter Network for Joint Entity and Relation Extraction](https://aclanthology.org/2021.emnlp-main.17.pdf) EMNLP 2021
+This repository contains codes for the paper [Task-Collaboration Representation Enhanced Joint Extraction Model for Element and Relationship]
 
 
 ## Model Overview
