@@ -62,9 +62,9 @@ python eval.py \
 ### Result Display
 | Dataset    |  Embedding         | Evaluation Metric | NER       | RE        | 
 | ---------- |  ---------         | ----------------- | --------- | --------- |
-| **ACE05**  |  Albert-xxlarge-v1 |Micro              | 90.1      | 67.4      |
-| **ACE04**  |  Albert-xxlarge-v1 |Micro              | 89.8      | 63.7      |
-| **SciERC** |  Scibert-uncased   |Micro              | 67.5      | 39.5      |
+| ACE2005    |  Albert-xxlarge-v1 |Micro              | 90.1      | 67.4      |
+| ACE2004    |  Albert-xxlarge-v1 |Micro              | 89.8      | 63.7      |
+| SciERC     |  Scibert-uncased   |Micro              | 67.5      | 39.5      |
 
 
 F1 results on ACE04:
