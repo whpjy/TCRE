@@ -112,4 +112,4 @@ As requested, we release ablation NER/RE results of 5 runs in the category of en
 | Selective  | 68.1/37.4  |67.0/35.9 |67.5/38.5 |66.8/35.1   | 67.7/36.7  | 67.4/36.7  | 0.53/1.32          |
 
 ## Other
-The above is our complete model and main dataset experimental code. In terms of data processing, we have referred to the paper [A Partition Filter Network for Joint Entity and Relation Extraction](https://aclanthology.org/2021.emnlp-main.17.pdf) EMNLP 2021. Regarding the code for other detailed analysis experiments and expansion experiments, we will update it to this warehouse as soon as possible after optimization processing.
+The above is our complete model and main dataset experimental code. In terms of data processing, we have referred to the paper [A Partition Filter Network for Joint Entity and Relation Extraction](https://aclanthology.org/2021.emnlp-main.17.pdf). Regarding the code for other detailed analysis experiments and expansion experiments, we will update it to this warehouse as soon as possible after optimization processing.
