@@ -62,16 +62,16 @@ python eval.py \
 ### Result Display
 | Dataset    |  Embedding         | Evaluation Metric | NER       | RE        | 
 | ---------- |  ---------         | ----------------- | --------- | --------- |
-| **ACE05**  |  Albert-xxlarge-v1 |Micro              | 89.0      | 66.8      |
-| **ACE04**  |  Albert-xxlarge-v1 |Micro              | 89.3      | 62.5      |
-| **SciERC** |  Scibert-uncased   |Micro              | 66.8      | 38.4      |
+| **ACE05**  |  Albert-xxlarge-v1 |Micro              | 90.1      | 67.4      |
+| **ACE04**  |  Albert-xxlarge-v1 |Micro              | 89.8      | 63.7      |
+| **SciERC** |  Scibert-uncased   |Micro              | 67.5      | 39.5      |
 
 
 F1 results on ACE04:
-| 5-fold     |  0    |  1  | 2   | 3     |  4      | Average |
+| 5-fold     |  1    |  2  | 3   | 4     |  5      | Average |
 | ---------- |  ---- |---- |---- |------ | ------- | ------- |
-| Albert-NER |  89.7 |89.9 |89.5 |89.7   |  87.6   | 89.3    |
-| Albert-RE  |  65.5 |61.4 |63.4 |61.5   |  60.7   | 62.5    |
+| Albert-NER |  90.0 |89.7 |90.4 |90.2   |  88.8   | 89.8    |
+| Albert-RE  |  66.8 |62.6 |64.9 |62.7   |  61.5   | 63.7    |
 
 
 ## Extension on Ablation Study
