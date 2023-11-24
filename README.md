@@ -8,7 +8,7 @@ This repository contains codes for the paper "Task-Collaboration Representation 
 ### Framework
 
 ![](./fig/model.png)
-In this work, we propose a joint feature extraction model TCRE based on task collaboration representation enhancement, which focuses on capturing and utilizing specific relationships between tasks to enhance task feature representation. Compared to existing multitasking methods, TCRE exhibits better performance, confirming the effectiveness of using dependency relationships between tasks for feature extraction and feature relationship extraction in collaborative learning
+In this work, we propose a joint feature extraction model TCRE based on task collaboration representation enhancement, which focuses on capturing and utilizing specific relationships between tasks to enhance task feature representation. Compared to existing multitasking methods, TCRE exhibits better performance, confirming the effectiveness of using dependency relationships between tasks for feature extraction and feature relationship extraction in collaborative learning.
 
 
 ## Preparation
