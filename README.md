@@ -1,6 +1,6 @@
 # TCRE
 
-This repository contains codes for the paper:"Task-Collaboration Representation Enhanced Joint Extraction Model for Element and Relationship"
+This repository contains codes for the paper "Task-Collaboration Representation Enhanced Joint Extraction Model for Element and Relationship"
 
 
 ## Model Overview
