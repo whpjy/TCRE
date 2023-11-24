@@ -27,6 +27,8 @@ This is the first work that covers all the mainstream English datasets for evalu
 
 Please follow the instructions of reademe.md in each dataset folder in ./data/ for data acquisition and preprocessing.  
 
+Download the pretrained models  [Albert-xxlarge-v1]([https://aclanthology.org/2021.emnlp-main.17.pdf](https://huggingface.co/albert-xxlarge-v1/tree/main)). and [Scibert-uncased]([https://aclanthology.org/2021.emnlp-main.17.pdf](https://huggingface.co/allenai/scibert_scivocab_uncased/tree/main)). from Hugging Face and place them in the corresponding folder under the pre training path.
+
 ### Model Training
 The training command-line is listed below:  
 ```
