@@ -77,7 +77,6 @@ F1 results on ACE04:
 
 
 ## Extension on Ablation Study
-As requested, we release ablation NER/RE results of 5 runs in the category of encoding scheme and decoding strategy.
 
 | Method |  ACE2005   |  SCIERC  | 
 | ---------- |  --------- |--------- |
