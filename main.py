@@ -176,7 +176,6 @@ if __name__ == '__main__':
 
         BCEloss = loss()
         best_dev_result = 0
-        best_result = 0
         triple_best = None
         entity_best = None
 
@@ -236,20 +235,16 @@ if __name__ == '__main__':
                 dev_triple, dev_entity, dev_loss = evaluate(dev_batch, rel2idx, ner2idx, args, "dev")
                 test_triple, test_entity, test_loss = evaluate(test_batch, rel2idx, ner2idx, args, "test")
                 average_dev_f1 = dev_triple["f"] + dev_entity["f"]
-                average_f1 = test_triple["f"] + test_entity["f"]
-
                 if epoch == 0 or average_dev_f1 > best_dev_result:
                     best_dev_result = average_dev_f1
-                    if average_f1 > best_result:
-                        best_result = average_f1
-                        triple_best = test_triple
-                        entity_best = test_entity
-                        torch.save(model.state_dict(), output_dir + "/" + model_file)
-                        logger.info("Best result on dev saved!!!")
-                        saved_file.save(
-                            "{} \t\t\t {:.4f} \t\t {:.4f} \t {:.4f} \t {:.4f} \t {:.4f} \t {:.4f} \t {:.4f}".format(
-                                epoch, train_loss / steps, dev_loss, test_loss, dev_entity["f"],
-                                dev_triple["f"], test_entity["f"], test_triple["f"]))
+                    triple_best = test_triple
+                    entity_best = test_entity
+                    torch.save(model.state_dict(), output_dir + "/" + model_file)
+                    logger.info("Best result on dev saved!!!")
+                    saved_file.save(
+                        "{} \t\t\t {:.4f} \t\t {:.4f} \t {:.4f} \t {:.4f} \t {:.4f} \t {:.4f} \t {:.4f}".format(
+                            epoch, train_loss / steps, dev_loss, test_loss, dev_entity["f"],
+                            dev_triple["f"], test_entity["f"], test_triple["f"]))
                 else:
 
                     saved_file.save(
